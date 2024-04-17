@@ -4,61 +4,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
     <title>Simple Games Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            background-color: #f3f3f3;
-            margin-bottom: 30px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-around;
-        }
-        .game-button {
-            position: relative; /* Make the .game-button a positioning context */
-            width: 250px; /* Set a specific width */
-            height: 250px; /* Set a specific height */
-            padding: 20px;
-            border: none; /* Remove the border */
-            font-size: 18px;
-            cursor: pointer;
-            outline: none;
-            background-size: cover; /* Ensure the background covers the button */
-            background-position: center; /* Center the background */
-            overflow: hidden; /* Prevent any overflow from the button */
-        }
-
-        .game-button-text
-        {
-            background-color: #ffffff;
-            padding: 3px; /*add this if you want a bit of space around the text*/
-            position: absolute; /* Position the text within the button */
-            bottom: 10px; /* Place it 10px from the bottom */
-            left: 10px; /* Place it 10px from the left */
-            width: calc(100% - 20px); /* Take padding into account for the width */
-            text-align: center; /* Center the text */
-            border-radius: 12px;
-        }
-    </style>
 </head>
 <body>
 
-<div class="header">Games</div>
+<header>Games</header>
+
 
 <div class="button-container">
-    <button class="game-button" onclick="playGame('Poker')" style="background-image: url('poker.jpg');">
+    <button class="game-button" id = "poker" onclick="playGame('Poker')">
         <span class="game-button-text">Poker</span>
     </button>
-    <button class="game-button" onclick="playGame('Hangman')" style="background-image: url('hangman.jpg');">
+    <button class="game-button" id = "hangman" onclick="playGame('Hangman')">
         <span class="game-button-text">Hangman</span>
     </button>
-    <button class="game-button" onclick="playGame('Dice Roll')" style="background-image: url('dice.jpg');">
+    <button class="game-button" id = "dice" onclick="playGame('Dice Roll')">
         <span class="game-button-text">Dice Roll</span>
     </button>
 </div>
