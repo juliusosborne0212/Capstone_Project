@@ -11,11 +11,11 @@ app.use(express.json()); //parse app/json
 app.use(cors()) // enable cors
 
 // May not use mongo, just a json. Frontend will pull random word from words.json
- // Mongo
-// mongoose.connect(process.env.MONGODB_URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// }).then(() => console.log("MongoDB Connected")).catch(err => console.log(err));
+// Mongo
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => console.log("MongoDB Connected")).catch(err => console.log(err));
 
 // Route to get a word
 app.get('/words', (req, res) => {
